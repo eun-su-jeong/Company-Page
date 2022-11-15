@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6,
 input, select, textarea, button, option {font-family: "Noto Sans KR", "맑은 고딕", "돋움", dotum, sans-serif;}
 
 html {position:relative;}
-html, body {font-weight:normal;color:#555;}
+html, body {font-weight:normal;color:#333;}
 body {position:relative;font-size:16px;}
 body, div, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, form, fieldset, legend, button, p, pre, blockquote, menu, figure, input {margin:0;padding:0;}
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {display:block;}
