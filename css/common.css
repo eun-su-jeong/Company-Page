@@ -63,9 +63,53 @@ header{position:fixed;top:0;left:0;width:100vw;}
 header .site{display:flex;justify-content:center;align-items:center;height:80px;}
 footer{position:fixed;bottom:0;left:0;width:100vw;}
 footer nav{display:flex;justify-content:center;align-items:center;height:80px;}
-footer nav .btn-menu{color:#333;}
-footer nav .btn-menu .icn{width:24px;height:24px;background-image:url("../img/btn_menu.svg");background-repeat:no-repeat;background-position: 50% 50%;}
+
+footer nav .btn-menu{display: flex; justify-content: center; align-items: center; position: absolute; color:#333; cursor: pointer; z-index: 90;}
+footer nav .btn-menu .icn{position: relative; width:30px; height:18px;}
 footer nav .btn-menu .icn + .lbl{margin-left:12px;}
+footer nav .btn-menu .icn .toggle {display: block; cursor: pointer;}
+footer nav .btn-menu .icn .toggle span { display: block; background: #000; width: 28px; height: 2px; transition: 0.25s margin 0.25s, 0.25s transform;}
+footer nav .btn-menu .icn .toggle span:nth-child(1) {margin-bottom: 6px;}
+footer nav .btn-menu .icn .toggle span:nth-child(3) {margin-top: 6px;}
+footer nav .btn-menu .icn .toggle.active span {transition: 0.25s margin, 0.25s transform 0.25s;}
+footer nav .btn-menu .icn .toggle.active span:nth-child(1) {margin-top: 10px; margin-bottom: 1px; transform: rotate(45deg);}
+footer nav .btn-menu .icn .toggle.active span:nth-child(2) { transform: rotate(45deg); display: none;}
+footer nav .btn-menu .icn .toggle.active span:nth-child(3) { margin-top: -4px; transform: rotate(135deg);}
+
+footer .overlay{position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; visibility: hidden; transition: all .35s; z-index: 50;}
+footer .overlay::before{position: absolute; content: ''; background: #E5E5E5; left: -55%; top: 0; width: 50%; height: 100%; transition: left .35s ease;}
+footer .overlay::after{ position: absolute; content: ''; background: #E5E5E5; right: -55%; top: 0; width: 50%; height: 100%; transition: all .35s ease;}
+footer .overlay.open{visibility: visible;height: 100%;}
+footer .overlay.open::before{left: 0;}
+footer .overlay.open::after{right: 0;}
+footer .overlay.open li {
+	animation: fadeInRight 0.5s ease forwards;
+	animation-delay: 0.35s;
+}
+footer .overlay.open li:nth-of-type(2) {animation-delay: .45s;}
+footer .overlay.open li:nth-of-type(3) {animation-delay: .55s;}
+footer .overlay.open li:nth-of-type(4) {animation-delay: .65s;}
+footer .overlay.open li:nth-of-type(5) {animation-delay: .75s;}
+footer .overlay.open li:nth-of-type(6) {animation-delay: .85s;}
+footer .overlay .overlay-menu{ position: relative; top: 50%; transform: translateY(-50%); height: initial;  text-align: center; z-index: 100;}
+footer .overlay nav.overlay-menu ul{ display: inline-block; position: relative; margin: 0 auto; height: 100%;} 
+footer .overlay nav.overlay-menu ul li{ display: block; position: relative; height: calc(100% / 6); min-height: 50px; padding-bottom: 40px; opacity: 0;}
+footer .overlay ul li a{display: block; position: relative; overflow: hidden; font-size: 30px; color: #888; text-transform: uppercase; text-align: center;}
+footer .overlay nav.overlay-menu ul li a:hover{color: #000;}
+footer .overlay nav.overlay-menu ul li a:hover::after,
+footer .overlay nav.overlay-menu ul li a:focus::after,
+footer .overlay nav.overlay-menu ul li a:active::after{width: 100%;}
+footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute; top: 50%; left: 50%; width: 0%; transform: translateX(-50%); height: 1px; background: #000; transition: .35s;}
+  @keyframes fadeInRight {
+	  0% {
+		  opacity: 0;
+		  left: 20%;
+	  }
+	  100% {
+		  opacity: 1;
+		  left: 0;
+	  }
+  }
 
 main article {display:flex;justify-content:center;align-items:center;width:100vw;height:100vh;background:#eee;}
 
