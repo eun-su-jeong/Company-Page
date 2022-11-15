@@ -151,7 +151,6 @@ footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute;
 .ui-about article{padding: 260px 0;}
 .ui-about .sub-title-wrap{margin-bottom: 84px;}
 .ui-about .img-wrap .txt-wrap p:first-of-type{margin: 45px 0 20px 0;}
-
 .img-wrap{display: flex; align-items: center;margin-bottom: 260px;}
 .img-wrap:last-of-type{margin-bottom: 0;}
 .img-wrap .txt-wrap{width: 580px; margin-left: 80px;}
@@ -173,7 +172,6 @@ footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute;
 .ui-piinolife .right{width: 580px;}
 .ui-piinolife .txt-wrap.flex .subtxt:first-of-type{margin: 45px 0 20px 0;}
 .ui-piinolife .txt-wrap + img{margin-top: 60px;}
-
 .ui-piinolife .culture-list{margin-top: 260px;}
 .ui-piinolife .culture-list .sub-title-wrap{width: 255px;}
 .ui-piinolife .culture-list .icn-list-wrap{display: flex;justify-content: space-between; flex-wrap: wrap; margin-top: 80px;}
@@ -189,15 +187,20 @@ footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute;
 .icn.travel{background: url(../img/travel.svg);}
 .ui-piinolife .culture-list .icn-list-wrap .icn-list .title{font-size: 28px; font-weight: 700; color: #000;margin: 26px 0 16px 0;}
 .ui-piinolife .culture-list .icn-list-wrap .icn-list .subtxt{margin-bottom: 90px;}
-
-
 .ui-piinolife .img-wrap{padding-bottom: 300px;margin-bottom:0}
 .ui-piinolife .img-wrap .txt-wrap .subtit{margin: 90px 0 30px 0;}
 .ui-piinolife .img-wrap .txt-wrap .subtxt.bold{margin-bottom: 4px;}
-
 .ui-piinolife .btm-wrap{position: relative; height: 792px;background: #D9D9D9; }
 .ui-piinolife .btm-wrap p{position: absolute;top: -50px;left: 50%;transform: translateX(-50%);font-size: 78px; font-weight: 700; line-height: 94px; text-align: center; color: #000; width: 100%;}
 
+/* PiinoNews */
+.ui-news article{padding: 0 0 260px 0;}
+.ui-news .top-title-wrap{padding: 210px 340px 120px;}
+.ui-news .news-wrap{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.ui-news .news-wrap .news-cont{width: 372px;margin-bottom: 80px;}
+.ui-news .news-wrap .news-cont .thumbnail{background: url(../img/piino_thumbnail.png) no-repeat center; width: 372px; height: 240px;}
+.ui-news .news-wrap .news-cont .news-tit{font-size: 24px;font-weight: 600;line-height: 29px;letter-spacing: -0.02em;text-align: left;margin: 32px 0 8px 0;}
+.ui-news .news-wrap .news-cont .news-date{font-size: 16px;font-weight: 400;line-height: 30px;letter-spacing: -0.02em;text-align: left;}
 
 
 /* z-index */
