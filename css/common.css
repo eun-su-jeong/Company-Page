@@ -160,7 +160,7 @@ footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute;
 
 
 /* PiinoLife */
-.ui-piinolife article{padding: 260px 0;}
+.ui-piinolife article{padding: 260px 0 170px 0;}
 .ui-piinolife .img-wrap .txt-wrap .top-title-wrap{padding: 0;}
 .ui-piinolife .banner-wrap{position: relative;}
 .ui-piinolife .banner-wrap h2{position:absolute;bottom: -45px;left: 340px;font-size: 74px; font-weight: 600; color: #000;text-transform:uppercase}
@@ -189,9 +189,9 @@ footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute;
 .icn.travel{background: url(../img/travel.svg);}
 .ui-piinolife .culture-list .icn-list-wrap .icn-list .title{font-size: 28px; font-weight: 700; color: #000;margin: 26px 0 16px 0;}
 .ui-piinolife .culture-list .icn-list-wrap .icn-list .subtxt{margin-bottom: 90px;}
-.ui-piinolife .culture-list .icn-list-wrap .icn-list .subtxt:last-of-type{margin-bottom: 0px;}
 
-.ui-piinolife .img-wrap{padding-bottom: 300px;}
+
+.ui-piinolife .img-wrap{padding-bottom: 300px;margin-bottom:0}
 .ui-piinolife .img-wrap .txt-wrap .subtit{margin: 90px 0 30px 0;}
 .ui-piinolife .img-wrap .txt-wrap .subtxt.bold{margin-bottom: 4px;}
 
