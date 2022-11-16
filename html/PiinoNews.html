@@ -25,7 +25,7 @@
 	<script type="text/javascript" src="../lib/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="../lib/jquery-ui-1.12.1.min.js"></script>
 	<script type="text/javascript" src="../lib/swiper-5.4.2.min.js"></script>
-
+	<script type="text/javascript" src="../js/common.js"></script>
 </head>
 
 <body>
@@ -129,7 +129,30 @@
 		<footer>
 			<section>
 				<article>
-					<nav><a href="#" class="btn-menu"><span class="icn"></span><span class="lbl">MENU</span></a></nav>
+					<nav>
+						<a href="#" class="btn-menu">
+							<span class="icn">
+								<span class="toggle" id="toggle">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+							</span>
+							<span class="lbl">MENU</span>
+						</a>
+					</nav>
+					<div class="overlay">
+						<nav class="overlay-menu">
+							<ul>
+								<li><a href="About.html">about</a></li>
+								<li><a href="PiinoLife.html">piino life</a></li>
+								<li><a href="PiinoNews.html">piino news</a></li>
+								<li><a href="Project.html">project</a></li>
+								<li><a href="Recruit.html">recruit</a></li>
+								<li><a href="Contact.html">contact</a></li>
+							</ul>
+						</nav>
+					</div>
 				</article>
 			</section>
 		</footer>
