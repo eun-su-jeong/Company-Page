@@ -116,10 +116,10 @@ footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute;
 .ui-carousel{position:relative;}
 .ui-carousel .swiper-control{display:flex;justify-content:center;position:absolute;top:0;right:-100px;bottom:0;left:auto;}
 .ui-carousel .swiper-pagination{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;right:-80px;height:100%;padding:12px;}
-.ui-carousel .swiper-pagination .swiper-pagination-bullet{display:flex;justify-content:center;align-items:center;width:64px;height:64px;margin:0 4px;background:none;opacity:.4;}
-.ui-carousel .swiper-pagination .swiper-pagination-bullet:after{font-family:"FontAwesome";font-size:48px;font-weight:normal;font-style:normal;-webkit-font-smoothing:antialiased;content:"\f4d8";}
+.ui-carousel .swiper-pagination .swiper-pagination-bullet{display:flex;justify-content:center;align-items:center;width:64px;height:50px;margin:0 4px;background:none;opacity:.4;}
+.ui-carousel .swiper-pagination .swiper-pagination-bullet:after{content: ""; display: block; width: 25px; height: 2px; background-color:rgba(17, 17, 17, .25); -webkit-font-smoothing:antialiased;}
 .ui-carousel .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{color:rgb(225, 64, 64);opacity:1;}
-.ui-carousel .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:after{content:"\f787";}
+.ui-carousel .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:after{content:""; display: block; width: 25px; height: 2px; background-color:rgba(17, 17, 17, 1);}
 .instafeed-swiper .swiper-container,
 .instafeed-swiper .swiper-container .swiper-wrapper{height:688px;}
 .instafeed-swiper .swiper-container .swiper-slide .items .item{height:332px;}
