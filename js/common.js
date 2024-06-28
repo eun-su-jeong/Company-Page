@@ -2,6 +2,7 @@ var _device = {};
 
 // 즉시실행 IIFE
 (function ($) {
+
 	_device = {
 		isMobile: false,
 		isAndroid: false,
@@ -18,6 +19,7 @@ var _device = {};
 		winW: 0,
 		winH: 0
 	}
+
 	// platform & browser detection
 	var ua = navigator.userAgent.toLowerCase();
 	if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(ua) ||
@@ -50,7 +52,9 @@ var _device = {};
 var publish = function () {
 	var common = {
 		init: function () {
-			common.toggleBtn();		
+			common.toggleBtn();
+			// common.splash();
+			common.initSwiper();
 		},
 		toggleBtn: function () {
 			$('.btn-menu').click(function () {
@@ -63,11 +67,65 @@ var publish = function () {
 					text.html("MENU");
 				}
 			});
+		},
+		// splash: function() {
+		// 	$(window).on('load', function() {
+		// 		$('.loading img').on('animationend', function() {
+		// 			$('.splash').addClass('hide');
+		// 		});
+		// 	});
+		// },
+		initSwiper: function() {
+			new Swiper('.swiper', {
+				loop: true,
+				autoplay: {
+					delay: 5000,
+				},
+				slidesPerView: 'auto',
+				spaceBetween: 20,
+			});
 		}
 	};
 	return common;
 }();
 
 $(function () {
+	$.fn.hasClasses = function (selectors) {
+		var self = this;
+		for (var i in selectors) {
+			if ($(self).hasClass(selectors[i])) return true;
+		}
+		return false;
+	};
+	$.fn.changeElementType = function (newType) {
+		var newElements = [];
+		$(this).each(function () {
+			var attrs = {};
+			$.each(this.attributes, function (idx, attr) {
+				attrs[attr.nodeName] = attr.nodeValue;
+			});
+			var newElement = $("<" + newType + "/>", attrs).append($(this).contents());
+			$(this).replaceWith(newElement);
+			newElement.push(newElement);
+		});
+		return $(newElements);
+	};
+	$.fn.grandparent = function (recursion) {
+		if (recursion == undefined) recursion = 2;
+		if (typeof (recursion) == "number") {
+			recursion = parseInt(recursion);
+			if (recursion > 0) {
+				grandsome = $(this);
+				for (var i = 0; i < recursion; i++) {
+					grandsome = grandsome.parent();
+				}
+				return grandsome;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	};
 	publish.init();
 });
