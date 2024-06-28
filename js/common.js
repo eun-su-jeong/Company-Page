@@ -55,6 +55,7 @@ var publish = function () {
 			common.toggleBtn();
 			// common.splash();
 			common.initSwiper();
+			common.float();
 		},
 		toggleBtn: function () {
 			$('.btn-menu').click(function () {
@@ -83,6 +84,11 @@ var publish = function () {
 				},
 				slidesPerView: 'auto',
 				spaceBetween: 20,
+			});
+		},
+		float: function() {
+			$('.float-btn').click(function() {
+				$('.float').toggleClass('on');
 			});
 		}
 	};
