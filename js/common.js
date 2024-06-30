@@ -52,10 +52,17 @@ var _device = {};
 var publish = function () {
 	var common = {
 		init: function () {
+			common.logo();
 			common.toggleBtn();
 			// common.splash();
 			common.initSwiper();
 			common.float();
+		},
+		logo: function () {
+			$('.logo').on('click', function (e) {
+				e.preventDefault();
+				window.location.href = '/Company-Page';
+			})
 		},
 		toggleBtn: function () {
 			$('.btn-menu').click(function () {

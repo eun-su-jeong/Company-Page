@@ -160,7 +160,6 @@ main .splash .loading .line{position: absolute; bottom: 0; left: 2rem; width: 0;
 .main-creative .swiper .swiper-wrapper .swiper-slide .dim{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.2); opacity: 0; transition: all 0.2s ease;}
 .main-creative .swiper .swiper-wrapper .swiper-slide:hover .dim{opacity: 1;}
 .main-creative .swiper .swiper-wrapper .swiper-slide:hover .view{opacity: 1; transform: translateX(0);}
-{opacity: 1;}
 .main-creative .btm-txt {position: absolute; bottom: 4rem; right: 2rem; font-size: 2.2rem; font-weight: 700;}
 .main-creative .btm-txt p{font-size: 4rem;}
 
