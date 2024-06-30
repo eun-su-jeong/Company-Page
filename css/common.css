@@ -100,6 +100,8 @@ footer .overlay nav.overlay-menu ul li a:hover::after,
 footer .overlay nav.overlay-menu ul li a:focus::after,
 footer .overlay nav.overlay-menu ul li a:active::after{width: 100%;}
 footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute; top: 50%; left: 50%; width: 0%; transform: translateX(-50%); height: 1px; background: #000; transition: .35s;}
+footer .overlay nav.overlay-menu ul li a.no-effect:hover{color: #888;}
+footer .overlay nav.overlay-menu ul li a.no-effect::after{display: none;}
   @keyframes fadeInRight {
 	  0% {
 		  opacity: 0;
