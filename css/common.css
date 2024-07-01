@@ -72,7 +72,7 @@ footer nav .btn-menu .icn .toggle span { display: block; background: #000; width
 footer nav .btn-menu .icn .toggle span:nth-child(1) {margin-bottom: 6px;}
 footer nav .btn-menu .icn .toggle span:nth-child(3) {margin-top: 6px;}
 footer nav .btn-menu .icn .toggle.active span {transition: 0.25s margin, 0.25s transform 0.25s;}
-footer nav .btn-menu .icn .toggle.active span:nth-child(1) {margin-top: 10px; margin-bottom: 1px; transform: rotate(45deg);}
+footer nav .btn-menu .icn .toggle.active span:nth-child(1) {margin-top: 10px; margin-bottom: 2px; transform: rotate(45deg);}
 footer nav .btn-menu .icn .toggle.active span:nth-child(2) { transform: rotate(45deg); display: none;}
 footer nav .btn-menu .icn .toggle.active span:nth-child(3) { margin-top: -4px; transform: rotate(135deg);}
 
