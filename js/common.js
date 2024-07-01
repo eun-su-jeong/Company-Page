@@ -54,9 +54,9 @@ var publish = function () {
 		init: function () {
 			common.logo();
 			common.toggleBtn();
-			// common.splash();
 			common.initSwiper();
 			common.float();
+			// common.splash();
 		},
 		logo: function () {
 			$('.logo').on('click', function (e) {
@@ -76,13 +76,15 @@ var publish = function () {
 				}
 			});
 		},
-		// splash: function() {
-		// 	$(window).on('load', function() {
-		// 		$('.loading img').on('animationend', function() {
-		// 			$('.splash').addClass('hide');
-		// 		});
-		// 	});
-		// },
+		splash: function() {
+			$(window).on('load', function() {
+				console.log('Page fully loaded');
+				$('.loading img').on('animationend', function() {
+					console.log('Animation ended');
+					$('.splash').addClass('hide');
+				});
+			});
+		},
 		initSwiper: function() {
 			new Swiper('.swiper', {
 				loop: true,
