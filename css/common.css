@@ -344,7 +344,7 @@ main article .btm_txt p{font-size: 2rem; margin-bottom: 1rem;}
 .subtxt{font-size: 20px; color: #333;word-break:keep-all;}
 
 /* About */
-.ui-about article{ width: 100%; height: 100%; margin: 0; padding: 260px 0; background: #f1f1f1;}
+.ui-about article{display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; margin: 0; padding: 260px 0; background: #f1f1f1;}
 .ui-about .sub-title-wrap{margin-bottom: 84px;}
 .ui-about .sub-title-wrap h2{text-align: center}
 .ui-about article > img{width: 80%; margin: 0 10em;}
