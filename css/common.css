@@ -311,9 +311,8 @@ main article .btm_txt p{font-size: 2rem; margin-bottom: 1rem;}
 
 /*request*/
 .request .request-inner {display: flex; flex-direction: column; align-items: center; padding: 20em 0  10em;}
+.request .request-inner .contact-box{display: block; font-size: 2.5rem; text-align: center; margin-bottom: 3rem;}
 .request .request-inner h3{display: flex; flex-direction: column; align-items: center;margin-bottom: 3rem;}
-.request .request-inner p{display: block; font-size: 2.5rem; text-align: center; margin-bottom: 3rem; text-transform: uppercase;}
-.request .request-inner h3 span{display: block; font-size: 4rem; text-align: center; margin-bottom: 3rem; text-transform: uppercase;}
 .request .request-inner h3 strong{display: block; font-size: 4rem; text-align: center; margin-bottom: 3rem; text-transform: uppercase;}
 .request .request-inner .request-btn{display: inline-block; padding: 16px 32px; color: #fff; font-size: 28px; font-weight: 800; line-height: 1; border-radius: 32px; border: 2px solid #222; background-color: #222; transition: all .3s ease;}
 .request .request-inner .request-btn:hover{color: #222; background-color: #fff;}
