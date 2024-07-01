@@ -56,7 +56,7 @@ var publish = function () {
 			common.toggleBtn();
 			common.initSwiper();
 			common.float();
-			// common.splash();
+			common.splash();
 		},
 		logo: function () {
 			$('.logo').on('click', function (e) {
@@ -79,7 +79,7 @@ var publish = function () {
 		splash: function() {
 			$(window).on('load', function() {
 				console.log('Page fully loaded');
-				$('.loading img').on('animationend', function() {
+				$('.loading .line').on('animationend', function() {
 					console.log('Animation ended');
 					$('.splash').addClass('hide');
 				});
