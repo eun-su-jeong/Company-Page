@@ -57,6 +57,7 @@ var publish = function () {
 			common.initSwiper();
 			common.float();
 			common.splash();
+			common.scroll();
 		},
 		logo: function () {
 			$('.logo').on('click', function (e) {
@@ -98,6 +99,22 @@ var publish = function () {
 		float: function() {
 			$('.float-btn').click(function() {
 				$('.float').toggleClass('on');
+			});
+		},
+		scroll : function(){
+			$(window).on('scroll', function appear() {
+				const text = $('.appear'); // jQuery로 요소 선택
+				const windowHeight = $(window).height(); // 윈도우 높이 가져오기
+
+				if (text.offset().top < $(window).scrollTop() + windowHeight - 200) {
+					setTimeout(() => {
+						text.css({
+							'animation': 'appear_from_bottom ease 1.5s',
+							'opacity': '1'
+						});
+					}, 200);
+					$(window).off('scroll', appear); // 이벤트 리스너 제거
+				}
 			});
 		}
 	};

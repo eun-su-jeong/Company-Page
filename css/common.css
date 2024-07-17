@@ -95,12 +95,9 @@ footer .overlay .overlay-menu{ position: relative; top: 50%; transform: translat
 footer .overlay nav.overlay-menu ul{ display: inline-block; position: relative; margin: 0 auto; height: 100%;} 
 footer .overlay nav.overlay-menu ul li{ display: block; position: relative; height: calc(100% / 6); min-height: 50px; padding-bottom: 40px; opacity: 0;}
 footer .overlay ul li a{display: block; position: relative; overflow: hidden; font-size: 30px; color: #888; text-transform: uppercase; text-align: center;}
-footer .overlay nav.overlay-menu ul li a:hover{color: #000;}
-footer .overlay nav.overlay-menu ul li a:hover::after,
-footer .overlay nav.overlay-menu ul li a:focus::after,
-footer .overlay nav.overlay-menu ul li a:active::after{width: 100%;}
-footer .overlay nav.overlay-menu ul li a::after{content: ''; position: absolute; top: 50%; left: 50%; width: 0%; transform: translateX(-50%); height: 1px; background: #000; transition: .35s;}
-footer .overlay nav.overlay-menu ul li a.no-effect:hover{color: #888;}
+footer .overlay nav.overlay-menu ul li a:hover,
+footer .overlay nav.overlay-menu ul li a:hover{font-weight: bold; color: #32c4c1;}
+footer .overlay nav.overlay-menu ul li a.no-effect:hover{color: #888; font-weight: normal;}
 footer .overlay nav.overlay-menu ul li a.no-effect::after{display: none;}
   @keyframes fadeInRight {
 	  0% {
@@ -117,19 +114,21 @@ main section > article .video-background {position: absolute;top: 0;left: 0; wid
 .video-background .background-video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%);}
 .video-background .background-video .content {position: relative; z-index: 1; color: white; text-align: center; margin-top: 20%;}
 main article h3 {position: absolute; top: 180px; left: 2rem; text-transform: uppercase; font-family: "RedHatDisplay", "Pretendard", "Malgun Gothic", Dotum, Arial, sans-serif; color: #fff;}
-main article .sub-tit{display: block; font-size: 3rem; margin-bottom: -42px; margin-left: 1rem; color: #fff;}
-main article strong{font-size: 14vw;}
-main article .btm_txt{display: flex; flex-direction: column; align-items: flex-end; position: absolute; bottom: 2rem; right: 2rem; color:#fff;}
-main article .btm_txt span{font-family: 'RedHatDisplay', 'Pretendard', 'Malgun Gothic', Dotum, Arial, sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem;}
+main article .sub-tit{display: block; font-size: 2.5rem; margin-bottom: -42px; margin-left: .7rem; color: #fff;}
+main article strong{font-size: 12vw; letter-spacing: -8px;}
+main article .btm_txt{display: flex; flex-direction: column; align-items: flex-end; position: absolute; bottom: 2rem; right: 3rem; color:#fff;}
+main article .btm_txt span{font-family: 'RedHatDisplay', 'Pretendard', 'Malgun Gothic', Dotum, Arial, sans-serif; font-size: 2.2rem; font-weight: 700;}
 main article .btm_txt p{font-size: 2rem; margin-bottom: 1rem;}
 
-main .splash {display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #29c684; transition: all 1s ease;text-align: center; overflow: hidden;}
-main .splash.hide{opacity: 0; visibility: hidden; transform: translateY(-100%);}
+main .splash {display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #29c684; transition: all 2s ease; text-align: center; overflow: hidden;}
+main .splash.hide{/*opacity: 0; visibility: hidden; */transform: translateY(-100%);}
 main .splash .loading{display: block; width: 50%;float:left; position: relative; transition: all .2s ease;}
 main .splash .loading .line{position: relative; width: 100%; height: 20px; top: 45%; top: -webkit-calc(50% - 10px); top: calc(50% - 10px); margin-top: 20px; -webkit-animation: bar 10s ease-in-out; animation: bar 10s ease-in-out;}
+main .splash .loading img { width: 30% }
 main .splash .loading p{ position: absolute; font-size: 20px; width: 100%; height: 25px; text-align: center; bottom: 0; margin: 0; top:160px; background-color: #fff; opacity: 0; text-transform: uppercase; transition: all .2s ease;}
 main .splash .loading .line:before{ content: ""; position: absolute; background-color: #fff; top: -5px; left: 0; height: 30px; width: 0; z-index: 0; opacity: 1; -webkit-transform-origin:  100% 0%; transform-origin:  100% 0% ; -webkit-animation: line 10s ease-in-out; animation: line 10s ease-in-out;}
 main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-weight: 200; font-size: 16px; position: absolute; width: 100%; height: 20px; line-height: 20px; left: 0; top: 0; background-color: #003046; z-index: 1;}
+
 
 @-webkit-keyframes line{
 	0%{width: 0;}
@@ -156,22 +155,6 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 	70%{opacity: 1;}
 	100%{opacity: 0;}
 }
-
-
-
-/*@media (max-width: 700px){*/
-/*	.loading{*/
-/*		width: 50%;*/
-/*		background-color: inherit;*/
-/*	}*/
-
-/*}*/
-/*@media (max-width: 420px){*/
-/*	.loading{*/
-/*		width: 100%;*/
-/*		background-color: inherit;*/
-/*	}*/
-/*}*/
 
 
 .main-creative {padding: 20em 0;}
@@ -204,21 +187,14 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .request .request-inner .request-btn:hover{color: #222; background-color: #fff;}
 
 /*float*/
-.float{position: fixed; bottom: 0; left:1rem; z-index: 12; cursor:pointer;}
+.float{position: fixed; bottom: 0; left:2rem; z-index: 12; cursor:pointer;}
 .float .QnA{position: absolute; bottom: 8rem; left: 1.5rem; width: 300px; padding: 20px 20px 50px 20px; border-radius: 20px; box-shadow: rgba(0 0 0 / 5%) 0 0 10px; background: #fff url(../img/piinie_bg.png) no-repeat; background-size: 30%; background-position: bottom 10px right 10px; transform: scale(0); transform-origin: bottom left; transform: scale(0); transition: transform 0.3s ease;}
 .float.on .QnA{opacity: 1; transform: scale(1);}
 .float .QnA strong{display: block; width: 100%; padding-bottom: 10px; font-size: 1.2rem; border-bottom: 2px solid #222;}
 .float .QnA ul{padding-top: 10px;}
 .float .QnA ul li:first-child{padding-bottom: 10px; border-bottom: 2px dotted #222;}
 .float .QnA ul li a{display: block; padding: 5px 0; font-size: 1rem; color: #222; transition: all .3s ease;}
-/*.instafeed-swiper .swiper-container .swiper-slide .items{display:flex;flex-wrap:wrap;gap:24px;}*/
-/*.instafeed-swiper .swiper-container .swiper-slide .items .item{flex-grow:0;flex-shrink:0;flex-basis:auto;position:relative;width:332px;overflow:hidden;}*/
-/*.instafeed-swiper .swiper-container .swiper-slide .items .item img{width:100%;height:100%;object-fit:cover;}*/
-/* flll(늘어남) */
-/* cover */
-/* contain(빈공간) */
-/* flll(늘어남) */
-/* flll(늘어남) */
+
 
 .top-title-wrap {padding: 210px 340px 80px;font-size: 78px; line-height: 92px; letter-spacing: -3px;}
 .top-title-wrap h1{font-size: 78px; line-height: 92px; letter-spacing: -3px; color: #000;}
@@ -295,11 +271,23 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .ui-news .news-wrap .news-cont .news-tit{font-size: 24px;font-weight: 600;line-height: 29px;letter-spacing: -0.02em;text-align: left;margin: 32px 0 8px 0;}
 .ui-news .news-wrap .news-cont .news-date{font-size: 16px;font-weight: 400;line-height: 30px;letter-spacing: -0.02em;text-align: left;}
 
+@keyframes appear_from_bottom {
+	0%{
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 /* z-index */
 header{z-index:10;}
 footer{z-index:10;}
 .splash{z-index:99;}
+
+
 
 
 
