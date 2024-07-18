@@ -58,6 +58,7 @@ var publish = function () {
 			common.float();
 			common.splash();
 			common.scroll();
+			common.text();
 		},
 		logo: function () {
 			$('.logo').on('click', function (e) {
@@ -89,9 +90,6 @@ var publish = function () {
 		initSwiper: function() {
 			new Swiper('.swiper', {
 				loop: true,
-				autoplay: {
-					delay: 5000,
-				},
 				slidesPerView: 'auto',
 				spaceBetween: 20,
 			});
@@ -114,6 +112,22 @@ var publish = function () {
 						});
 					}, 200);
 					$(window).off('scroll', appear); // 이벤트 리스너 제거
+				}
+			});
+		},
+		text: function(){
+			$(window).on('scroll', function() {
+				console.log('Scroll event triggered');
+
+				const menuLabel = $('.btn-menu .lbl');
+				console.log('Scroll position:', $(window).scrollTop());
+
+				if ($(window).scrollTop() > 100) {
+					console.log('Changing menu label color to red');
+					menuLabel.css('color', 'red');
+				} else {
+					console.log('Resetting menu label color');
+					menuLabel.css('color', '');
 				}
 			});
 		}
