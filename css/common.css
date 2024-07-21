@@ -55,9 +55,11 @@ header,
 main,
 footer{position:relative;}
 section{position:relative;}
-article{position:relative;margin:0 auto;}
+article{position:relative;}
 
 .container{width:100vw;height:auto;background:#eee;}
+
+.container main section{padding: 150px 150px;}
 
 header{position:fixed;top:0;left:0;width:100vw;}
 header .site{display:flex;justify-content:center;align-items:center;height:80px;}
@@ -198,9 +200,10 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .float .QnA ul li a{display: block; padding: 5px 0; font-size: 1rem; color: #222; transition: all .3s ease;}
 
 
-.top-title-wrap {position: relative;padding: 210px 340px 80px;font-size: 78px; line-height: 92px; letter-spacing: -3px;}
-.top-title-wrap .main-title{position: absolute; top: 210px; left: 0;}
+.top-title-wrap {font-size: 78px; line-height: 92px; letter-spacing: -3px; padding-top: 100px;}
+.top-title-wrap .main-title{text-align: center;}
 .top-title-wrap h1{font-size: 78px; line-height: 92px; letter-spacing: -3px; color: #000;}
+.top-title-wrap h1 .text{display: block;}
 .sub-title-wrap h2{font-size: 48px; line-height: 56px; letter-spacing: -3px; color: #000;}
 .gray{color: #888 !important;}
 .bold{font-weight: 700;}
@@ -208,31 +211,32 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .subtxt{font-size: 20px; color: #333;word-break:keep-all;}
 
 /* About */
-.ui-about article{width: 100%; height: auto; padding: 0 100px;}
+.ui-about article{width: 100%; height: auto;}
 .ui-about article .image-wrapper{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding-top: 200px;}
-.ui-about .partner{display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; margin: 0; padding: 260px 0; background: #f1f1f1;}
-.ui-about .sub-title-wrap{margin-bottom: 84px;}
+.ui-about .partner{display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; margin: 0; padding-top: 200px;}
+.ui-about .sub-title-wrap{padding-bottom: 100px;}
 .ui-about .sub-title-wrap h2{text-align: center}
 .ui-about article > img{width: 80%; margin: 0 10em;}
 .ui-about .img-wrap .txt-wrap p:first-of-type{margin: 45px 0 20px 0;}
-.img-wrap{display: flex; align-items: center;margin-bottom: 260px;}
+.img-wrap{display: flex; justify-content: center; align-items: center;}
+.img-wrap.mobile{display: none;}
 .img-wrap:last-of-type{margin-bottom: 0;}
 .img-wrap .txt-wrap{width: 580px; margin-left: 80px;}
 .img-wrap .img-box{max-width: 920px; height: 520px; background-color: #D9D9D9;}
 .img-wrap .img-box img{width: 100%; height: 100%; object-fit: cover;}
-.img-wrap.reverse{justify-content: end;}
+.img-wrap.reverse{justify-content: end; padding-top: 200px;}
 .img-wrap.reverse .txt-wrap{margin-right: 80px;}
 
 
 /* PiinoLife */
-.ui-piinolife article{max-width: 1400px; width: 100%; height: auto; padding: 260px 0 170px 0;}
-.ui-piinolife article .img-box{margin-top: 50px; border-radius: 30px; overflow: hidden;}
-.ui-piinolife article .img-box img{display: block; width: 100%; margin: 0 auto;}
+.ui-piinolife .content{width: 100%; height: auto; padding-top: 200px; display: flex; flex-direction: column; align-items: center;}
+.ui-piinolife .content .img-box{padding-top: 200px;width: 100%;height: 750px;}
+.ui-piinolife .content .img-box img{display: block; width: 100%; height: 100%; object-fit: cover;}
 .ui-piinolife .img-wrap .txt-wrap .top-title-wrap{padding: 0;}
 .ui-piinolife .img-wrap .img-box{width: 920px; height: 520px; background-color: #D9D9D9;}
-.ui-piinolife .banner-wrap{position: relative; padding-bottom: 50px;}
+.ui-piinolife .banner-wrap{position: relative; padding-bottom: 50px; padding-top: 200px;}
 .ui-piinolife .banner-wrap h2{position:absolute;bottom: 0;left: 340px;font-size: 74px; font-weight: 600; color: #000;text-transform:uppercase}
-.ui-piinolife .banner-wrap::after{position: absolute;right: 340px;top: -70px;display: block; content: ''; width: 132px; height: 132px; border-radius: 50%; background: url(../img/circle.svg) #003046 no-repeat center;background-size: contain; animation: rotate 10s linear infinite;}
+.ui-piinolife .banner-wrap::after{position: absolute;right: 340px;top: 150px;display: block; content: ''; width: 132px; height: 132px; border-radius: 50%; background: url(../img/circle.svg) #003046 no-repeat center;background-size: contain; animation: rotate 10s linear infinite;}
 
 @keyframes rotate {
 	0% {transform: rotate(0deg);}
@@ -241,12 +245,12 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 /* after 이거쓰면 좋을듯 https://www.youtube.com/watch?v=zwl3kZPZ8H8 */
 
 .ui-piinolife .subtit{width: 460px;word-break:keep-all;}
-.ui-piinolife .txt-wrap.flex{display: flex;justify-content: space-between;}
+.ui-piinolife .txt-wrap.flex{display: flex;justify-content: space-between; gap:50px;}
 .ui-piinolife .left{width: 580px;}
 .ui-piinolife .right{width: 580px;}
 .ui-piinolife .txt-wrap.flex .subtxt:first-of-type{margin: 45px 0 20px 0;}
 .ui-piinolife .txt-wrap + img{margin-top: 60px;}
-.ui-piinolife .culture-list{margin-top: 260px;}
+.ui-piinolife .culture-list{max-width: 1400px; padding-top: 200px;}
 .ui-piinolife .culture-list .sub-title-wrap{width: 255px;}
 .ui-piinolife .culture-list .icn-list-wrap{display: flex;justify-content: space-between; flex-wrap: wrap; margin-top: 80px;}
 .ui-piinolife .culture-list .icn-list-wrap .icn-list{width: 580px;}
@@ -260,17 +264,17 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .icn.book{background: url(../img/book.svg);}
 .icn.travel{background: url(../img/travel.svg);}
 .ui-piinolife .culture-list .icn-list-wrap .icn-list .title{font-size: 28px; font-weight: 700; color: #000;margin: 26px 0 16px 0;}
-.ui-piinolife .culture-list .icn-list-wrap .icn-list .subtxt{margin-bottom: 90px;}
-.ui-piinolife .img-wrap{padding-bottom: 300px;margin-bottom:0}
+.ui-piinolife .culture-list .icn-list-wrap .icn-list .subtxt{padding-bottom: 50px;}
+.ui-piinolife .img-wrap{padding-top: 150px;}
 .ui-piinolife .img-wrap .txt-wrap .subtit{margin: 90px 0 30px 0;}
 .ui-piinolife .img-wrap .txt-wrap .subtxt.bold{margin-bottom: 4px;}
-.ui-piinolife .btm-wrap{position: relative; height: 792px;background: url("../img/photo06.jpg") no-repeat bottom; background-size: cover;}
-.ui-piinolife .btm-wrap p{position: absolute;top: -50px;left: 50%;transform: translateX(-50%);font-size: 78px; font-weight: 700; line-height: 94px; text-align: center; color: #000; width: 100%;}
+.ui-piinolife .btm-wrap{position:relative;width: 100%; height: 792px; padding-top: 250px;}
+.ui-piinolife .btm-wrap img {width: 100%; height: 100%; object-fit: cover;}
+.ui-piinolife .btm-wrap p{position: absolute;top: 200px;left: 50%;transform: translateX(-50%);font-size: 78px; font-weight: 700; line-height: 94px; text-align: center; color: #000; width: 100%;}
 
 /* PiinoNews */
-.ui-news article{width:100%; height: auto; max-width: 1400px; padding: 0 1rem 260px 1rem;}
-.ui-news .top-title-wrap{padding: 210px 100px 120px;}
-.ui-news .news-wrap{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.ui-news article{width:100%; height: auto; padding-top: 200px;}
+.ui-news .news-wrap{display: flex; justify-content: space-evenly; flex-wrap: wrap;}
 .ui-news .news-wrap .news-cont{width: 372px;margin-bottom: 80px;}
 .ui-news .news-wrap .news-cont .thumbnail{background: url(../img/piino_thumbnail.png) no-repeat center; width: 372px; height: 240px;}
 .ui-news .news-wrap .news-cont .news-tit{font-size: 24px;font-weight: 600;line-height: 29px;letter-spacing: -0.02em;text-align: left;margin: 32px 0 8px 0;}
@@ -363,6 +367,7 @@ footer{z-index:10;}
 	.ui-news{padding: 100px 0; display: flex; flex-direction: column; align-items: center;}
 	.ui-news article{height: auto; padding:0;}
 	.ui-news .top-title-wrap{padding: 0 1rem 2rem;}
+	.top-title-wrap h1 .text{display: initial;}
 	.ui-news .news-wrap .news-cont{width: 100%; min-width: 320px; display: flex; flex-direction: column; align-items: center;}
 	.ui-news .news-wrap .news-cont .thumbnail{width: 100%;}
 	.ui-news .news-wrap .news-cont .news-tit{padding: 0 1rem; font-size: 18px;}

@@ -9,7 +9,7 @@ html, body {font-weight:normal;color:#333;}
 body {position:relative;font-size:16px;}
 body, div, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, form, fieldset, legend, button, p, pre, blockquote, menu, figure, input {margin:0;padding:0;}
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {display:block;}
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, select, input, textarea, p, blockquote, th, td, menu, button, a, span, strong, label, header, footer, section, article, aside, nav, hgroup, details, figure, figcaption {word-break:break-word;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, select, input, textarea, p, blockquote, th, td, menu, button, a, span, strong, label, header, footer, section, article, aside, nav, hgroup, details, figure, figcaption {word-break:break-word;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box; word-break: keep-all}
 h1, h2, h3, h4, h5, h6, input, select, textarea, button, option {font-size:14px;font-weight:normal;color:inherit;}
 pre, code, samp, kbd {font-family:inherit;}
 h1, h2, h3, h4, h5, h6, strong, b, th {font-weight:bold;}
