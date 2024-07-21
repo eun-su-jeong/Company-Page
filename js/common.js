@@ -57,8 +57,8 @@ var publish = function () {
 			common.initSwiper();
 			common.float();
 			common.splash();
-			common.scroll();
-			common.text();
+			// common.scroll();
+			// common.menu();
 		},
 		logo: function () {
 			$('.logo').on('click', function (e) {
@@ -92,6 +92,9 @@ var publish = function () {
 				loop: true,
 				slidesPerView: 'auto',
 				spaceBetween: 20,
+				autoplay:{
+					delay: 3000,
+				}
 			});
 		},
 		float: function() {
@@ -99,38 +102,37 @@ var publish = function () {
 				$('.float').toggleClass('on');
 			});
 		},
-		scroll : function(){
-			$(window).on('scroll', function appear() {
-				const text = $('.appear'); // jQuery로 요소 선택
-				const windowHeight = $(window).height(); // 윈도우 높이 가져오기
-
-				if (text.offset().top < $(window).scrollTop() + windowHeight - 200) {
-					setTimeout(() => {
-						text.css({
-							'animation': 'appear_from_bottom ease 1.5s',
-							'opacity': '1'
-						});
-					}, 200);
-					$(window).off('scroll', appear); // 이벤트 리스너 제거
-				}
-			});
-		},
-		text: function(){
-			$(window).on('scroll', function() {
-				console.log('Scroll event triggered');
-
-				const menuLabel = $('.btn-menu .lbl');
-				console.log('Scroll position:', $(window).scrollTop());
-
-				if ($(window).scrollTop() > 100) {
-					console.log('Changing menu label color to red');
-					menuLabel.css('color', 'red');
-				} else {
-					console.log('Resetting menu label color');
-					menuLabel.css('color', '');
-				}
-			});
-		}
+		// scroll : function(){
+		// 	$(window).on('scroll', function appear() {
+		// 		const text = $('.appear'); // jQuery로 요소 선택
+		// 		const windowHeight = $(window).height(); // 윈도우 높이 가져오기
+		//
+		// 		if (text.offset().top < $(window).scrollTop() + windowHeight - 200) {
+		// 			setTimeout(() => {
+		// 				text.css({
+		// 					'animation': 'appear_from_bottom ease 1.5s',
+		// 					'opacity': '1'
+		// 				});
+		// 			}, 200);
+		// 			$(window).off('scroll', appear); // 이벤트 리스너 제거
+		// 		}
+		// 	});
+		// },
+		// menu: function (){
+		// 	$(window).scroll(function() {
+		// 		const scrollTop = $(window).scrollTop();
+		// 		const menuLabel = $('.btn-menu .lbl');
+		// 		const nav = $('.btn-menu .icn .toggle span');
+		//
+		// 		if (scrollTop > 50) {
+		// 			menuLabel.css('color', 'red');
+		// 			nav.css('color', 'red');
+		// 		} else {
+		// 			menuLabel.css('color', '');
+		// 			nav.css('color', '');
+		// 		}
+		// 	});
+		// },
 	};
 	return common;
 }();
