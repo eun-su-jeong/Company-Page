@@ -111,8 +111,12 @@ footer .overlay nav.overlay-menu ul li a.no-effect::after{display: none;}
 		  left: 0;
 	  }
   }
-main section > article {width:100vw;height:100vh;background:#eee;}
-main section > article .video-background {position: absolute;top: 0;left: 0; width: 100%; height: 100%; overflow: hidden;}
+/*.container main .main-intro,*/
+/*.container main .main-creative{padding: 0;}*/
+
+main .main-intro {position: relative; width: 100vw; height: 100vh; overflow: hidden;}
+main .main-intro > article {width:100vw;height:100vh;background:#eee;}
+main .main-intro > article .video-background {position: absolute;top: 0;left: 0; width: 100%; height: 100%; overflow: hidden;}
 .video-background .background-video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%);}
 .video-background .background-video .content {position: relative; z-index: 1; color: white; text-align: center; margin-top: 20%;}
 main article h3 {position: absolute; top: 180px; left: 2rem; text-transform: uppercase; font-family: "RedHatDisplay", "Pretendard", "Malgun Gothic", Dotum, Arial, sans-serif; color: #fff;}
@@ -160,7 +164,7 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 }
 
 
-.main-creative {padding: 20em 0;}
+.main-creative {position: relative; padding: 20em 0;}
 .main-creative h3{font-size: 2.5rem; text-align: center; margin-bottom: 3rem;}
 .main-creative small{display: block; font-size: 1.8rem; text-align: center; margin-bottom: 3rem;}
 .main-creative h3 span{display: block; font-size: 4rem; text-align: center; margin-bottom: 3rem; text-transform: uppercase}
