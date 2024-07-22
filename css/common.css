@@ -307,14 +307,19 @@ footer{z-index:10;}
 	main .splash .loading img{width: 50%;}
 
 	/*main-intro*/
-	main article .sub-tit{margin-left: 0; font-size: 1.5rem;}
-	main article strong{letter-spacing: initial}
-	main article .btm_txt{align-items: initial; right: 2rem; bottom: 8rem; white-space: nowrap;}
-	main article .btm_txt span{font-size: 1.5rem;}
-	main article .btm_txt p{font-size: 1rem;}
+	.main-intro article h3{left:50%; transform: translateX(-50%);}
+	.main-intro article .sub-tit{margin-left: 0; font-size: 1.5rem;}
+	.main-intro article strong{font-size: 16vw;letter-spacing: initial}
+	.main-intro article .btm_txt{bottom: 18rem;}
+	.main-intro article .btm_txt span{font-size: 1.5rem;}
+	.main-intro article .btm_txt p{font-size: 1rem;}
 
-	.float{bottom: 6rem; left: 0;}
+	.float{bottom: .5rem; left: 1rem; width: 60px;}
+	.float .float-btn img{width: 100%; height: 100%; object-fit: cover;}
+	.float .QnA{bottom: 5rem;}
 
+
+	.main-creative{padding: 8rem 0;}
 	.main-creative small{font-size: 1.5rem;}
 	.main-creative h3 span{font-size:2.5rem; word-break: keep-all;}
 
@@ -379,8 +384,12 @@ footer{z-index:10;}
 
 	/*footer*/
 	footer{background: #eee;}
-
+	.main-footer{background: transparent;}
+	footer nav .btn-menu{right: 1rem;}
+	footer nav .btn-menu .icn .toggle > span{width: 22px; background: #fff;}
+	footer nav .btn-menu .icn .toggle.active > span{width: 22px; background: #888;}
+	footer nav .btn-menu .lbl{color: #fff;}
+	footer nav .btn-menu .icn + .lbl{margin-left: 4px;}
 }
-
 
 

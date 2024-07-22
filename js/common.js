@@ -73,8 +73,10 @@ var publish = function () {
 				$('.overlay').toggleClass('open');
 				if ($('.toggle').hasClass('active')) {
 					text.html("CLOSE");
+					text.css("color", "#888");
 				} else {
 					text.html("MENU");
+					text.css("color", "#fff");
 				}
 			});
 		},
