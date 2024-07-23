@@ -57,8 +57,7 @@ var publish = function () {
 			common.initSwiper();
 			common.float();
 			common.splash();
-			// common.scroll();
-			// common.menu();
+			common.menu();
 		},
 		logo: function () {
 			$('.logo').on('click', function (e) {
@@ -69,14 +68,17 @@ var publish = function () {
 		toggleBtn: function () {
 			$('.btn-menu').click(function () {
 				let text = $('.lbl');
+				let bar = $('.icn > span > span');
 				$('.toggle').toggleClass('active');
 				$('.overlay').toggleClass('open');
 				if ($('.toggle').hasClass('active')) {
 					text.html("CLOSE");
 					text.css("color", "#888");
+					bar.css("background-color", "#888");
 				} else {
 					text.html("MENU");
 					text.css("color", "#fff");
+					bar.css("background-color", "#fff");
 				}
 			});
 		},
@@ -104,37 +106,28 @@ var publish = function () {
 				$('.float').toggleClass('on');
 			});
 		},
-		// scroll : function(){
-		// 	$(window).on('scroll', function appear() {
-		// 		const text = $('.appear'); // jQuery로 요소 선택
-		// 		const windowHeight = $(window).height(); // 윈도우 높이 가져오기
-		//
-		// 		if (text.offset().top < $(window).scrollTop() + windowHeight - 200) {
-		// 			setTimeout(() => {
-		// 				text.css({
-		// 					'animation': 'appear_from_bottom ease 1.5s',
-		// 					'opacity': '1'
-		// 				});
-		// 			}, 200);
-		// 			$(window).off('scroll', appear); // 이벤트 리스너 제거
-		// 		}
-		// 	});
-		// },
-		// menu: function (){
-		// 	$(window).scroll(function() {
-		// 		const scrollTop = $(window).scrollTop();
-		// 		const menuLabel = $('.btn-menu .lbl');
-		// 		const nav = $('.btn-menu .icn .toggle span');
-		//
-		// 		if (scrollTop > 50) {
-		// 			menuLabel.css('color', 'red');
-		// 			nav.css('color', 'red');
-		// 		} else {
-		// 			menuLabel.css('color', '');
-		// 			nav.css('color', '');
-		// 		}
-		// 	});
-		// },
+		menu: function() {
+			$(window).on('scroll', function() {
+				var $footer = $('.main-footer');
+				var scrollTop = $(window).scrollTop();
+				var windowHeight = $(window).height();
+				var bodyHeight = $(document).height();
+				var footerHeight = $footer.outerHeight();
+
+				if (scrollTop + windowHeight >= bodyHeight - footerHeight) {
+					$footer.css({
+						'position': 'relative',
+						'bottom': '0'
+					});
+				} else {
+					$footer.css({
+						'position': 'fixed',
+						'bottom': '0'
+					});
+				}
+			});
+		}
+
 	};
 	return common;
 }();
