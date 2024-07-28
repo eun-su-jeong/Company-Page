@@ -245,6 +245,8 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .content.column .txt-wrap .left{width: 50vw;}
 .content.column .txt-wrap .right{width: 50vw;}
 .content.column .img-box{max-width: initial; height: 650px;}
+.content.column.center{align-items: center}
+.content.column.center .sub-title-wrap{padding-bottom: 0;}
 .content.mobile{display: none;}
 /*.content:last-of-type{margin-bottom: 0;}*/
 
@@ -264,7 +266,7 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 }
 /* after 이거쓰면 좋을듯 https://www.youtube.com/watch?v=zwl3kZPZ8H8 */
 
-.ui-piinolife .subtit{width: 460px;word-break:keep-all;}
+/*.ui-piinolife .subtit{width: 460px;word-break:keep-all;}*/
 .ui-piinolife .txt-wrap.flex{display: flex;justify-content: space-between; gap:50px;}
 /*.ui-piinolife .left{width: 580px;}*/
 /*.ui-piinolife .right{width: 580px;}*/
