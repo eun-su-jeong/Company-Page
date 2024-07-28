@@ -238,19 +238,25 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 .content.reverse{justify-content: end;}
 .content.partners{flex-direction: column;}
 .content.partners img{width: 100%;}
+.content.banner .img-box{max-width: initial; height: auto; background-color: initial;}
+.content.banner::after{position: absolute; right: 165px; top: 120px; display: block; content: ''; width: 132px; height: 132px; border-radius: 50%; background: url(../img/circle.svg) #003046 no-repeat center;background-size: contain; animation: rotate 10s linear infinite;}
+.content.column{flex-direction: column; align-items: normal; width: 100%;}
+.content.column .txt-wrap{display: flex; width: 100%; gap: 4em; padding-bottom: 50px;}
+.content.column .txt-wrap .left{width: 50vw;}
+.content.column .txt-wrap .right{width: 50vw;}
+.content.column .img-box{max-width: initial; height: 650px;}
 .content.mobile{display: none;}
 /*.content:last-of-type{margin-bottom: 0;}*/
 
 
 /* PiinoLife */
 /*.ui-piinolife .content{width: 100%; height: auto; padding-top: 200px; display: flex; flex-direction: column; align-items: center;}*/
-.ui-piinolife .content .img-box{padding-top: 200px;width: 100%;height: 750px;}
-.ui-piinolife .content .img-box img{display: block; width: 100%; height: 100%; object-fit: cover;}
+/*.ui-piinolife .content .img-box{padding-top: 200px;width: 100%;height: 750px;}*/
+/*.ui-piinolife .content .img-box img{display: block; width: 100%; height: 100%; object-fit: cover;}*/
 .ui-piinolife .img-wrap .txt-wrap .top-title-wrap{padding: 0;}
 .ui-piinolife .img-wrap .img-box{width: 920px; height: 520px; background-color: #D9D9D9;}
 .ui-piinolife .banner-wrap{position: relative; padding-bottom: 50px; padding-top: 200px;}
 .ui-piinolife .banner-wrap h2{position:absolute;bottom: 0;left: 340px;font-size: 74px; font-weight: 600; color: #000;text-transform:uppercase}
-.ui-piinolife .banner-wrap::after{position: absolute;right: 340px;top: 150px;display: block; content: ''; width: 132px; height: 132px; border-radius: 50%; background: url(../img/circle.svg) #003046 no-repeat center;background-size: contain; animation: rotate 10s linear infinite;}
 
 @keyframes rotate {
 	0% {transform: rotate(0deg);}
@@ -260,8 +266,8 @@ main .splash .loading .line:after{ content: "LOADING ..."; color: #fff; font-wei
 
 .ui-piinolife .subtit{width: 460px;word-break:keep-all;}
 .ui-piinolife .txt-wrap.flex{display: flex;justify-content: space-between; gap:50px;}
-.ui-piinolife .left{width: 580px;}
-.ui-piinolife .right{width: 580px;}
+/*.ui-piinolife .left{width: 580px;}*/
+/*.ui-piinolife .right{width: 580px;}*/
 .ui-piinolife .txt-wrap.flex .subtxt:first-of-type{margin: 45px 0 20px 0;}
 .ui-piinolife .txt-wrap + img{margin-top: 60px;}
 .ui-piinolife .culture-list{max-width: 1400px; padding-top: 200px;}
