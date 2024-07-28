@@ -106,24 +106,38 @@ var publish = function () {
 				$('.float').toggleClass('on');
 			});
 		},
-		menu: function() {
-			$(window).on('scroll', function() {
-				var $footer = $('.main-footer');
-				var scrollTop = $(window).scrollTop();
-				var windowHeight = $(window).height();
-				var bodyHeight = $(document).height();
-				var footerHeight = $footer.outerHeight();
 
-				if (scrollTop + windowHeight >= bodyHeight - footerHeight) {
-					$footer.css({
-						'position': 'relative',
-						'bottom': '0'
-					});
+		menu: function() {
+			let btnMenu = $('.btn-menu');
+			let footer = $('footer');
+
+			// footer와 btnMenu가 존재하는지 확인
+			if (footer.length === 0) {
+				console.log('Footer element not found.');
+				return;
+			}
+			if (btnMenu.length === 0) {
+				console.log('BtnMenu element not found.');
+				return;
+			}
+
+			let footerOffset = footer.offset().top;
+			let initialBtnMenuOffset = btnMenu.offset().top;
+
+			console.log('Footer Offset:', footerOffset);
+			console.log('Initial BtnMenu Offset:', initialBtnMenuOffset);
+
+			$(window).on('scroll', function () {
+				let scrollPos = $(window).scrollTop();
+
+				console.log('Scroll Position:', scrollPos);
+
+				if (scrollPos > (footerOffset - initialBtnMenuOffset - 50)) {
+					btnMenu.addClass('scrolled');
+					console.log('Class added: scrolled');
 				} else {
-					$footer.css({
-						'position': 'fixed',
-						'bottom': '0'
-					});
+					btnMenu.removeClass('scrolled');
+					console.log('Class removed: scrolled');
 				}
 			});
 		}
@@ -170,5 +184,8 @@ $(function () {
 			return false;
 		}
 	};
-	publish.init();
+	// publish.init();
+	$(document).ready(function() {
+		publish.init();
+	});
 });
