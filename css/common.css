@@ -380,7 +380,7 @@ footer{z-index:10;}
 	footer nav .btn-menu .icn .toggle > span{width: 22px; background: #fff;}
 	footer nav .btn-menu .icn .toggle.active > span{width: 22px; background: #888;}
 	footer nav .btn-menu .lbl{color: #fff;}
-	footer nav .btn-menu .icn + .lbl{margin-left: 4px;}
+	footer nav .btn-menu .icn + .lbl{margin-left: 4px; display: none;}
 }
 
 
